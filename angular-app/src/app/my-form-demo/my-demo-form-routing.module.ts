@@ -5,10 +5,11 @@ import { MyFormDemoComponent } from './my-form-demo.conponent';
 
 const routes: Routes = [
   { path: '', component: MyFormDemoComponent },
-  { path: 'formdemo', component: FormDemoComponent }];
+  { path: 'formdemo', component: FormDemoComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MyDemoFormRoutingModule { }
+export class MyDemoFormRoutingModule {}
