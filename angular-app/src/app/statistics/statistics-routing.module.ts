@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: StatisticsComponent,
-    canDeactivate: [canDeactivateGuard],
+    // canDeactivate: [canDeactivateGuard],
   },
 ];
 

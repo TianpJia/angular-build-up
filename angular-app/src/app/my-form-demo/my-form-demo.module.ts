@@ -3,17 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormDemoComponent } from './form-demo/form-demo.component';
 import { MyFormDemoComponent } from './my-form-demo.conponent';
 import { MyDemoFormRoutingModule } from './my-demo-form-routing.module';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    FormDemoComponent,
-    MyFormDemoComponent
-  ],
+  declarations: [FormDemoComponent, MyFormDemoComponent],
   imports: [
     CommonModule,
-    MyDemoFormRoutingModule
+    MyDemoFormRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 })
-export class MyFormDemoModule { }
+export class MyFormDemoModule {}

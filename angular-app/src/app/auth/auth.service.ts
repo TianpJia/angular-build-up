@@ -6,7 +6,7 @@ import { delay, Observable, of, tap } from 'rxjs';
 })
 export class AuthService {
   constructor() {}
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   // store the URL so we can redirect after logging in
   redirectUrl: string | null = null;
