@@ -42,6 +42,12 @@ function promiseTest() {
   pro
     .then((res) => {
       console.info('promise then 1');
+      new Promise((resolve) => {
+        resolve(1);
+      }).then(() => console.info('new promise then'));
+      setTimeout(() => {
+        console.info('time out');
+      }, 0);
     })
     .then(() => {
       console.info('promise then 2');
@@ -59,5 +65,10 @@ export class MyFormDemoComponent {
   testClick() {
     // convertArray(arr);
     promiseTest();
+    fetch('/api/hello')
+      .then((res) => {
+        return res.text();
+      })
+      .then((result) => console.info(result));
   }
 }

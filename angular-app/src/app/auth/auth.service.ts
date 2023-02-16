@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { delay, Observable, of, tap } from 'rxjs';
+import { Logger } from './logger.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  constructor(private logger: Logger) {}
   isLoggedIn = true;
 
   // store the URL so we can redirect after logging in
@@ -20,5 +21,6 @@ export class AuthService {
 
   logout(): void {
     this.isLoggedIn = false;
+    this.logger.log('logout');
   }
 }

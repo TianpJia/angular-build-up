@@ -1,0 +1,30 @@
+.box {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  display: flow-root;
+}
+
+.left {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  margin: 10px;
+}
+
+.right {
+  width: 200px;
+  height: 200px;
+  background-color: burlywood;
+  margin: 30px;
+}
+
+.main {
+  height: 200px;
+  background-color: chartreuse;
+  margin: 20px;
+}
+
+.wrap {
+  display: flow-root;
+}

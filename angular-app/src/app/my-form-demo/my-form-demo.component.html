@@ -2,3 +2,75 @@
 <div>
   <button (click)="testClick()">test</button>
 </div>
+<div class="box">
+  <div class="left">left</div>
+  <div class="wrap">
+    <div class="main">midlle</div>
+  </div>
+  <div class="right">right</div>
+</div>
+
+<style>
+  /*第一种左右float*/
+  /* .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .main {
+    margin: 0 200px;
+  } */
+
+  /* 第二种定位布局，脱离文档流
+  .left,
+  .right {
+    position: absolute;
+    top: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .main {
+    margin: 0 200px;
+  } */
+
+  /*第三种flex布局*/
+  /* .box {
+    display: flex;
+  }
+  .main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+  } */
+
+  /*第四种表格布局*/
+  /* .box {
+    display: table;
+    width: 100%;
+  }
+
+  .box > div {
+    display: table-cell;
+  } */
+
+  /*第5种函数布局*/
+  /* .box {
+    width: 100%;
+  }
+  .box > div {
+    float: left;
+  }
+  .main {
+    width: calc(100% - 400px);
+  } */
+</style>
