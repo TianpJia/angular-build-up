@@ -1,6 +1,7 @@
 <div *appUnless="condition">
   <div [appHighlight]="color">
-    (A) This paragraph is displayed because the condition is false.
+    (A) This {{ "paragraph" | star | uppercase }} is displayed because the
+    condition is false.
   </div>
 </div>
 <div *appUnless="!condition">

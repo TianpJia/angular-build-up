@@ -6,6 +6,7 @@ import { MyDemoFormRoutingModule } from './my-demo-form-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UnlessDirective } from '../directive/unless.directive';
 import { HighlightDirective } from '../directive/highlight.directive';
+import { StarPipe } from '../pipe/star.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HighlightDirective } from '../directive/highlight.directive';
     MyFormDemoComponent,
     UnlessDirective,
     HighlightDirective,
+    StarPipe,
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,6 @@ import { HighlightDirective } from '../directive/highlight.directive';
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [UnlessDirective, HighlightDirective],
+  exports: [UnlessDirective, HighlightDirective, StarPipe],
 })
 export class MyFormDemoModule {}
