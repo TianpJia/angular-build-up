@@ -61,7 +61,12 @@ function promiseTest() {
   styleUrls: ['./my-form-demo.component.css'],
 })
 export class MyFormDemoComponent {
+  condition = false;
+  color = 'lightgreen';
   constructor() {}
+  changeCondition() {
+    this.condition = !this.condition;
+  }
   testClick() {
     // convertArray(arr);
     promiseTest();

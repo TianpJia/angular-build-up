@@ -1,12 +1,24 @@
-<p>my form demo works!</p>
+<div *appUnless="condition">
+  <div [appHighlight]="color">
+    (A) This paragraph is displayed because the condition is false.
+  </div>
+</div>
+<div *appUnless="!condition">
+  <p appHighlight defaultColor="violet">
+    (B) Although the condition is true, this paragraph is displayed because
+    appUnless is set to false.
+  </p>
+</div>
 <div>
   <button (click)="testClick()">test</button>
+  <button (click)="changeCondition()">change condition</button>
 </div>
 <div class="box">
   <div class="left">left</div>
-  <div class="wrap">
+  <!-- <div class="wrap">
     <div class="main">midlle</div>
-  </div>
+  </div> -->
+  <div class="main">midlle</div>
   <div class="right">right</div>
 </div>
 
@@ -44,14 +56,14 @@
   } */
 
   /*第三种flex布局*/
-  /* .box {
+  .box {
     display: flex;
   }
   .main {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-  } */
+  }
 
   /*第四种表格布局*/
   /* .box {
