@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 const arr = new Array(5)
   .fill(0)
@@ -63,17 +64,20 @@ function promiseTest() {
 export class MyFormDemoComponent {
   condition = false;
   color = 'lightgreen';
-  constructor() {}
+  constructor(private http: HttpClient) {}
   changeCondition() {
     this.condition = !this.condition;
   }
   testClick() {
     // convertArray(arr);
-    promiseTest();
-    fetch('/api/hello')
-      .then((res) => {
-        return res.text();
-      })
-      .then((result) => console.info(result));
+    // promiseTest();
+    // fetch('/api/hello')
+    //   .then((res) => {
+    //     return res.text();
+    //   })
+    //   .then((result) => console.info(result));
+    this.http
+      .get('/hello', { observe: 'response', responseType: 'text' })
+      .subscribe((res) => console.info(res));
   }
 }
